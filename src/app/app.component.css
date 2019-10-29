@@ -1,0 +1,51 @@
+.padding-form {
+  padding-top: 10px;
+  margin: 200px 750px;
+}
+
+label {
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
+  margin-top: 10px;
+}
+
+input {
+  height: 30px;
+  float: right;
+  margin-top: 10px;
+}
+
+select {
+  clear: both;
+  float: left;
+  margin-top: 10px;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-save {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.button-cancel {
+  margin-top: 5px;
+}
+
+.code-input-field {
+  margin-left: 15px;
+}
+
+.name-input-field {
+  margin-left: 10px;
+}
+
+.description-field {
+  margin-top: 10px;
+}

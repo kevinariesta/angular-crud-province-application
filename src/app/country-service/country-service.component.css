@@ -1,0 +1,10 @@
+.form-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.country-select-field {
+  margin-left: 12px;
+  margin-top: 10px;
+}
