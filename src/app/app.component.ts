@@ -20,14 +20,6 @@ export class AppComponent {
       }
   }
 
-  // open() {
-  //   this.modalService.open(content, this.modalOptions).result.then((result) => {
-  //     this.closeResult = `Closed with: ${result}`;
-  //   }, (reason) => {
-  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-  //   });
-  // }
-
   open() {
     const modalRef = this.modalService.open(ModalComponent);
     modalRef.componentInstance.modal_title = 'Province Confirmation';

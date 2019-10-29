@@ -6,14 +6,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ModalComponent } from "./modal-component/modal.component";
-import { CountryListComponent } from './country-service/country-list/country-list.component';
 import { CountryServiceComponent } from './country-service/country-service.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
-    CountryListComponent,
     CountryServiceComponent
   ],
   imports: [

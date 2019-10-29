@@ -1,7 +1,9 @@
 <div class="form-flex">
   <label>Country: </label>
-  <select name="country" class="custom-select-sm country-select-field">
-    <option selected>- Select Country -</option>
-    <app-country-list></app-country-list>
+  <select name="country" class="custom-select-sm country-select-field" [(ngModel)]="countryList">
+    <option value="" selected>- Select Country - </option>
+    <option
+      *ngFor="let country of countryList"
+      [value]="country.id">{{ country.name }}</option>
   </select>
 </div>
