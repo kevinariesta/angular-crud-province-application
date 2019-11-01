@@ -1,38 +1,14 @@
-import { Component } from '@angular/core';
-
-import { NgbModal, ModalDismissReasons, NgbModalOptions } from "@ng-bootstrap/ng-bootstrap";
-import { ModalComponent } from "./modal-component/modal.component";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'crud-province';
-  modalOptions: NgbModalOptions;
-  closeResult: string;
+export class AppComponent implements OnInit {
 
-  constructor(
-    private modalService: NgbModal) {
-      this.modalOptions = {
-        backdropClass: "customBackdrop",
-      }
-  }
+  constructor() {}
 
-  open() {
-    const modalRef = this.modalService.open(ModalComponent);
-    modalRef.componentInstance.modal_title = 'Province Confirmation';
-    modalRef.componentInstance.modal_content = 'Are you sure with your data input?';
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
+  ngOnInit() {
   }
 }

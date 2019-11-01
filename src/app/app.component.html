@@ -1,22 +1,2 @@
-<div class="container padding-form">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Province</h3>
-      <div class="form-flex">
-        <label>Code: </label>
-        <input type="number" class="form-control code-input-field" required>
-      </div>
-      <div class="form-flex">
-        <label>Name: </label>
-        <input type="text" class="form-control name-input-field">
-      </div>
-      <app-country-service></app-country-service>
-      <div class="form-flex description-field">
-        <label>Description: </label>
-        <textarea class="form-control" rows="3" name="description">Enter text here...</textarea>
-      </div>
-      <button type="button" class="btn btn-outline-primary button-save" name="save" (click)="open()">Save</button>
-      <button type="button" class="btn btn-outline-dark button-cancel" name="cancel">Cancel</button>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
+<!--Routed views go here -->

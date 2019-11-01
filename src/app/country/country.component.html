@@ -1,0 +1,15 @@
+<div class="form-flex">
+  <label>Country: </label>
+  <select
+    name="country"
+    id="country"
+    class="custom-select-sm country-select-field"
+    (change)="emitCountryName()"
+    [(ngModel)]="name">
+    <option [value]="" selected>- Select Country - </option>
+    <option
+      *ngFor="let country of countryList"
+      [value]="country.name"
+    >{{ country.name }}</option>
+  </select>
+</div>

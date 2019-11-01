@@ -1,0 +1,24 @@
+<h1 class="header-title">Provinces Around the World</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>List of Provinces :</h3>
+      <div class="form-group" *ngFor="let prov of provinces; let i = index">
+        <div class="flex">
+          <h3>{{ i+1 }}. </h3>
+          <ul>
+            <li> Province Name : {{ prov.name }}</li>
+            <li> Province Code : {{ prov.code }}</li>
+            <li> Country : {{ prov.countryName }}</li>
+            <li> Description : {{ prov.description }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <a routerLink="/provinceregister">Back to Province Register</a>
+</nav>

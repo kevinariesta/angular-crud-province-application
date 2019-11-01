@@ -1,0 +1,39 @@
+<div class="container form-register">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Province</h3>
+      <div class="form-flex">
+        <label>Code: </label>
+        <input type="number" class="form-control code-input-field" required [(ngModel)]="code">
+      </div>
+      <div class="form-flex">
+        <label>Name: </label>
+        <input type="text" class="form-control name-input-field" [(ngModel)]="name">
+      </div>
+      <app-country (countryName)="setCountryName($event)"></app-country>
+      <div class="form-flex description-field">
+        <label>Description: </label>
+        <textarea class="form-control" rows="3" name="description" [(ngModel)]="description">Enter text here...</textarea>
+      </div>
+      <button type="button" class="btn btn-outline-primary button-save" name="save" (click)="open(mymodal)">Save</button>
+      <button type="button" class="btn btn-outline-dark button-cancel" name="cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Province Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure with your data input?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="onSaveProvince(); modal.close('Save click')" routerLink="/provincelist">Yes</button>
+    <button type="button" class="btn btn-danger" (click)="modal.dismiss('Cancel click')">No</button>
+  </div>
+</ng-template>
+
